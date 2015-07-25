@@ -29,7 +29,7 @@ Template.scene.rendered = ->
       renderer = new (THREE.CanvasRenderer)
 
     renderer.setSize window.innerWidth, window.innerHeight
-    document.body.appendChild renderer.domElement
+    $('#scene').appendChild renderer.domElement
 
   animate = ->
     requestAnimationFrame animate
@@ -44,6 +44,5 @@ Template.scene.rendered = ->
   init()
   animate()
 
-  $()
 
 

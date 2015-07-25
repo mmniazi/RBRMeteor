@@ -33,9 +33,8 @@
     font-size: 20px;;
 }
 
-.sec-heading {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.big-text {
+    font-size: 15px;
 }
 
 .separator {
@@ -44,9 +43,9 @@
     clear: both;
 }
 
-.input-group {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.margins {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Range Slider */
