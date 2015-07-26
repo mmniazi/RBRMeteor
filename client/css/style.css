@@ -41,6 +41,8 @@
     background: #ecf0f1;
     height: 2px;
     clear: both;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .margins {
@@ -48,7 +50,31 @@
     margin-bottom: 10px;
 }
 
-/* Range Slider */
+.neg-margin {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+#graphs-canvas {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#scene-layout {
+    margin-bottom: -10px;
+}
+
+#scene {
+    position: absolute;
+    z-index: -1;
+}
+
+/*---------------- Range Slider ----------------*/
 
 input[type=range] {
     /*removes default webkit styles*/

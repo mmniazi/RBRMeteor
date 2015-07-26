@@ -1,0 +1,122 @@
+<!--suppress HtmlFormInputWithoutLabel -->
+<template name="outputs">
+    <div class="col-md-offset-9 col-xs-12 col-md-3 hidden" id="outputs">
+
+        <!-- Outputs -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <span class="main-heading">Outputs</span>
+            </div>
+            <div class="panel-body neg-margin">
+                <div class="col-xs-12">
+                    <div class="panel-group panel-group-lists collapse in" id="output-accordion">
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="" data-toggle="collapse" data-parent="#output-accordion" href="#graphs">
+                                        <b>Graphs</b>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="graphs" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <canvas id="graphs-canvas" class="row"></canvas>
+                                    <script>
+                                        Chart.defaults.global.responsive = true;
+                                        var ctx = document.getElementById("graphs-canvas").getContext("2d");
+                                        var data = {
+                                            labels: ["1", "2", "3", "4", "5", "6", "7"],
+                                            datasets: [
+                                                {
+                                                    label: "My First dataset",
+                                                    fillColor: "rgba(220,220,220,0.2)",
+                                                    strokeColor: "rgba(220,220,220,1)",
+                                                    pointColor: "rgba(220,220,220,1)",
+                                                    pointStrokeColor: "#fff",
+                                                    pointHighlightFill: "#fff",
+                                                    pointHighlightStroke: "rgba(220,220,220,1)",
+                                                    data: [65, 59, 80, 81, 56, 55, 40]
+                                                },
+                                                {
+                                                    label: "My Second dataset",
+                                                    fillColor: "rgba(151,187,205,0.2)",
+                                                    strokeColor: "rgba(151,187,205,1)",
+                                                    pointColor: "rgba(151,187,205,1)",
+                                                    pointStrokeColor: "#fff",
+                                                    pointHighlightFill: "#fff",
+                                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                                    data: [28, 48, 40, 19, 86, 27, 90]
+                                                }
+                                            ]
+                                        };
+
+                                        var myLineChart = new Chart(ctx).Line(data);
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#output-accordion"
+                                       href="#output-val">
+                                        <b>Output Values</b>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="output-val" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="row text-center">
+                                        <div class="col-xs-2">
+                                            <b>&omega;<sub>x</sub></b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                        <div class="col-xs-2">
+                                            <b>&omega;<sub>y</sub></b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                        <div class="col-xs-2">
+                                            <b>&omega;<sub>z</sub></b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                        <div class="col-xs-2">
+                                            <b>time</b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="row text-center">
+                                        <div class="col-xs-2">
+                                            <b>e<sub>0</sub></b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                        <div class="col-xs-2">
+                                            <b>e<sub>1</sub></b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                        <div class="col-xs-2">
+                                            <b>e<sub>2</sub></b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                        <div class="col-xs-2">
+                                            <b>e<sub>3</sub></b>
+                                        </div>
+                                        <div class="col-xs-4">1.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="margins btn btn-primary btn-block" id="showgraphs-button">Show All
+                            Graphs
+                        </button>
+                        <button type="button" class="margins btn btn-primary btn-block" id="close-output-button">Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
