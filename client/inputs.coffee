@@ -152,3 +152,4 @@ Template.body.rendered = ->
       density: 4
       format: wNumb(decimals: 2)
 
+
